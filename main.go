@@ -1,29 +1,9 @@
 package main
 
 import (
-	"fmt"
-	"main/app/models"
+	"main/app/controllers"
 )
 
 func main() {
-	// fmt.Println(config.Config.Port)
-	// fmt.Println(config.Config.SQLDriver)
-	// fmt.Println(config.Config.DbName)
-	// fmt.Println(config.Config.LogFile)
-
-	// log.Println("test")
-
-	// fmt.Println(models.Db)
-
-	u := &models.User{}
-	u.Name = "test"
-	u.Email = "test@gmail.com"
-	u.PassWord = "testtest"
-	u.CreateUser()
-	fmt.Println(u)
-
-	user, _ := models.GetUser(2)
-	user.CreateTodo("おそうじ")
-
-
+	controllers.StartMainServer()
 }
